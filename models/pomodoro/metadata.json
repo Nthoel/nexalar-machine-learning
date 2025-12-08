@@ -1,0 +1,28 @@
+{
+  "model_type": "Lookup Table",
+  "approach": "Persona-based optimal settings from research",
+  "persona_settings": {
+    "fast_learner": {
+      "focus_minutes": 20,
+      "rest_minutes": 5,
+      "rationale": "Quick learners benefit from shorter, intense bursts"
+    },
+    "consistent_learner": {
+      "focus_minutes": 25,
+      "rest_minutes": 5,
+      "rationale": "Standard Pomodoro for consistent progress"
+    },
+    "reflective_learner": {
+      "focus_minutes": 45,
+      "rest_minutes": 10,
+      "rationale": "Deep thinkers need longer focus periods"
+    },
+    "new_learner": {
+      "focus_minutes": 25,
+      "rest_minutes": 5,
+      "rationale": "Standard settings to build habit"
+    }
+  },
+  "no_ml_needed": true,
+  "created_at": "2025-12-08T01:44:13.758360"
+}

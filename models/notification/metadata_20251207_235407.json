@@ -1,0 +1,28 @@
+{
+  "timestamp": "20251207_235407",
+  "model_type": "Random Forest (Classifier + Regressor)",
+  "feature_names": [
+    "total_activities",
+    "completion_rate",
+    "consistency_ratio",
+    "activities_per_week",
+    "avg_gap_between_sessions_days",
+    "peak_hour",
+    "morning_ratio",
+    "afternoon_ratio",
+    "evening_ratio",
+    "night_ratio",
+    "weekly_mean_activities",
+    "weekly_std_activities",
+    "total_study_time_4weeks_min",
+    "avg_quiz_score"
+  ],
+  "metrics": {
+    "type_accuracy": 0.6666666666666666,
+    "time_mae": 0.0
+  },
+  "targets_achieved": {
+    "type_accuracy": false,
+    "time_mae": true
+  }
+}

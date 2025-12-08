@@ -1,0 +1,16 @@
+{
+  "timestamp": "20251207_235409",
+  "model_type": "Gradient Boosting Regressor",
+  "feature_names": [
+    "study_time_hours",
+    "pomodoro_sessions",
+    "quizzes_completed",
+    "modules_finished"
+  ],
+  "metrics": {
+    "mae": 0.38048040315716936,
+    "rmse": 0.6750029002912149,
+    "r2": 0.9989282318402917
+  },
+  "targets_achieved": true
+}

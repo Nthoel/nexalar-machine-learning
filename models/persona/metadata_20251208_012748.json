@@ -1,0 +1,103 @@
+{
+  "timestamp": "20251208_012748",
+  "model_name": "Random Forest",
+  "feature_names": [
+    "avg_study_duration_min",
+    "total_activities",
+    "std_study_duration_min",
+    "activities_per_week",
+    "total_completed",
+    "engagement_score",
+    "total_study_time_4weeks_min",
+    "total_submissions",
+    "completion_rate",
+    "avg_quiz_score",
+    "avg_gap_between_sessions_days",
+    "avg_revisits_per_tutorial",
+    "activity_intensity",
+    "revisit_rate",
+    "weekly_std_activities",
+    "consistency_ratio",
+    "total_completions",
+    "time_diversity"
+  ],
+  "num_features": 18,
+  "metrics": {
+    "accuracy": 1.0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1_score": 1.0,
+    "total_samples": 80,
+    "correct_predictions": 80,
+    "errors": 0
+  },
+  "targets_achieved": {
+    "accuracy": true,
+    "f1_score": true
+  },
+  "confusion_matrix": [
+    [
+      22,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      19,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      18,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      21
+    ]
+  ],
+  "classification_report": {
+    "consistent_learner": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 22.0
+    },
+    "fast_learner": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 19.0
+    },
+    "new_learner": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 18.0
+    },
+    "reflective_learner": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 21.0
+    },
+    "accuracy": 1.0,
+    "macro avg": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 80.0
+    },
+    "weighted avg": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 80.0
+    }
+  }
+}

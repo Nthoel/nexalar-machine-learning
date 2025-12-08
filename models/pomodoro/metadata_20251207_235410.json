@@ -1,0 +1,24 @@
+{
+  "timestamp": "20251207_235410",
+  "model_type": "Multi-output Random Forest Regressor",
+  "feature_names": [
+    "avg_study_duration_min",
+    "std_study_duration_min",
+    "max_study_duration_min",
+    "completion_rate",
+    "consistency_ratio",
+    "activities_per_week",
+    "peak_hour",
+    "morning_ratio",
+    "afternoon_ratio",
+    "evening_ratio",
+    "revisit_rate",
+    "total_activities"
+  ],
+  "metrics": {
+    "mae_focus": 1.2627881408888686,
+    "mae_rest": 0.5956847808028792,
+    "mae_avg": 0.9292364608458739
+  },
+  "target_achieved": true
+}

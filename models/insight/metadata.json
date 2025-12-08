@@ -1,0 +1,18 @@
+{
+  "model_type": "Formula-Based Scoring",
+  "approach": "Weighted average of 4 metrics",
+  "weights": {
+    "study_time": 0.3,
+    "pomodoro": 0.25,
+    "quizzes": 0.2,
+    "modules": 0.25
+  },
+  "targets": {
+    "study_time_hours": 10,
+    "pomodoro_sessions": 20,
+    "quizzes_completed": 5,
+    "modules_finished": 10
+  },
+  "no_ml_needed": true,
+  "created_at": "2025-12-08T01:44:13.513864"
+}
