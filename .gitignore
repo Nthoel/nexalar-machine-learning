@@ -49,14 +49,6 @@ backend/node_modules/
 .DS_Store
 *.log
 
-# ML Models (large files)
-*.pkl
-*.h5
-*.joblib
-*.model
-ml/models/
-ml-service/models/
-
 # Data files
 *.csv
 data/raw/
