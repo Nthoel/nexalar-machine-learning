@@ -4,7 +4,7 @@ Auto-load from .env file
 """
 
 from pydantic_settings import BaseSettings
-from typing import List
+from typing import List, Dict, Any
 import os
 
 
@@ -46,6 +46,56 @@ class Settings(BaseSettings):
     # Feature Validation
     feature_count: int = 18
     strict_validation: bool = True
+    
+    # ================================
+    # Weekly Reports Persona Config
+    # ================================
+    SELECTED_PERSONA_FEATURES: List[str] = [
+        'total_activities',
+        'completion_rate', 
+        'consistency_score',
+        'engagement_score',
+        'total_study_time_hours',
+        'quiz_completion_rate',
+        'quiz_avg_score',
+        'module_completion_rate',
+        'avg_time_per_module',
+        'avg_session_duration',
+        'help_request_frequency',
+        'revisit_rate',
+        'avg_response_time',
+        'avg_break_duration',
+        'quizzes_completed',
+        'modules_finished'
+    ]
+    
+    PERSONA_CONFIG: Dict[str, Any] = {
+        "personas": ["new_learner", "fast_learner", "consistent_learner", "reflective_learner"],
+        "feature_weights": {
+            'total_activities': 0.12,
+            'completion_rate': 0.10,
+            'consistency_score': 0.12,
+            'engagement_score': 0.08,
+            'total_study_time_hours': 0.10,
+            'quiz_completion_rate': 0.08,
+            'quiz_avg_score': 0.07,
+            'module_completion_rate': 0.08,
+            'avg_time_per_module': 0.06,
+            'avg_session_duration': 0.05,
+            'help_request_frequency': 0.04,
+            'revisit_rate': 0.05,
+            'avg_response_time': 0.03,
+            'avg_break_duration': 0.02,
+            'quizzes_completed': 0.05,
+            'modules_finished': 0.05
+        },
+        "pomodoro_defaults": {
+            "new_learner": {"focus": 20, "short_break": 5, "long_break": 15},
+            "fast_learner": {"focus": 25, "short_break": 5, "long_break": 15},
+            "consistent_learner": {"focus": 30, "short_break": 5, "long_break": 20},
+            "reflective_learner": {"focus": 45, "short_break": 10, "long_break": 25}
+        }
+    }
     
     model_config = {
         "env_file": ".env",

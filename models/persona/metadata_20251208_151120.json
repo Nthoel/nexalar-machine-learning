@@ -1,0 +1,111 @@
+{
+  "timestamp": "20251208_151120",
+  "model": "Random Forest (SMOTE Balanced)",
+  "features": [
+    "avg_study_duration_min",
+    "total_activities",
+    "std_study_duration_min",
+    "activities_per_week",
+    "total_completed",
+    "engagement_score",
+    "total_study_time_4weeks_min",
+    "total_submissions",
+    "completion_rate",
+    "avg_quiz_score",
+    "avg_gap_between_sessions_days",
+    "avg_revisits_per_tutorial",
+    "activity_intensity",
+    "revisit_rate",
+    "weekly_std_activities",
+    "consistency_ratio",
+    "total_completions",
+    "time_diversity"
+  ],
+  "num_features": 18,
+  "original_samples": 400,
+  "train_samples_after_smote": 360,
+  "test_samples": 80,
+  "accuracy": 0.9875,
+  "correct": 79,
+  "errors": 1,
+  "class_distribution_original": {
+    "consistent_learner": 112,
+    "reflective_learner": 104,
+    "fast_learner": 96,
+    "new_learner": 88
+  },
+  "class_distribution_after_smote": {
+    "fast_learner": 90,
+    "consistent_learner": 90,
+    "new_learner": 90,
+    "reflective_learner": 90
+  },
+  "confusion_matrix": [
+    [
+      21,
+      0,
+      1,
+      0
+    ],
+    [
+      0,
+      19,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      18,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      21
+    ]
+  ],
+  "top_features": [
+    {
+      "feature": "avg_study_duration_min",
+      "importance": 0.20531555238796856
+    },
+    {
+      "feature": "total_completed",
+      "importance": 0.1454761264883932
+    },
+    {
+      "feature": "engagement_score",
+      "importance": 0.11768068379554823
+    },
+    {
+      "feature": "std_study_duration_min",
+      "importance": 0.10130134282366339
+    },
+    {
+      "feature": "total_study_time_4weeks_min",
+      "importance": 0.09601289166664659
+    },
+    {
+      "feature": "total_activities",
+      "importance": 0.08197074198365932
+    },
+    {
+      "feature": "completion_rate",
+      "importance": 0.0677229957504148
+    },
+    {
+      "feature": "avg_quiz_score",
+      "importance": 0.06191792858570839
+    },
+    {
+      "feature": "total_submissions",
+      "importance": 0.028625188091591862
+    },
+    {
+      "feature": "total_completions",
+      "importance": 0.028601064256589245
+    }
+  ]
+}
