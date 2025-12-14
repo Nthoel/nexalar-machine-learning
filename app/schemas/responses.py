@@ -1,5 +1,7 @@
 """
+
 Pydantic response models for API
+
 """
 
 from pydantic import BaseModel, Field, ConfigDict
@@ -9,7 +11,6 @@ from datetime import datetime
 
 class PersonaResponse(BaseModel):
     """Response model for persona prediction"""
-    
     persona: str = Field(..., description="Predicted persona")
     confidence: float = Field(..., description="Prediction confidence (0-1)")
     model_version: str = Field(..., description="Model version")
@@ -30,7 +31,6 @@ class PersonaResponse(BaseModel):
 
 class NotificationResponse(BaseModel):
     """Response model for notification generation"""
-    
     type: str = Field(..., description="Notification type")
     message: str = Field(..., description="Notification message")
     best_time_hour: int = Field(..., description="Best hour to send (0-23)")
@@ -40,12 +40,15 @@ class NotificationResponse(BaseModel):
 
 class InsightResponse(BaseModel):
     """Response model for weekly insights"""
-    
     engagement_score: float = Field(..., description="Engagement score (0-100)")
     performance_level: str = Field(..., description="Performance level")
     improvement_rate: float = Field(..., description="Week-over-week improvement %")
     recommendations: List[str] = Field(..., description="Actionable recommendations")
     summary: str = Field(..., description="Human-readable summary")
+    extended_message: str = Field(
+        default="", 
+        description="Extended motivational message for 'Say More' section (1 paragraph with 3 sentences)"
+    )
     metrics: Dict[str, Any] = Field(..., description="Detailed metrics")
     week_number: Optional[int] = Field(None, description="Week number")
     persona: str = Field(..., description="User persona")
@@ -53,7 +56,6 @@ class InsightResponse(BaseModel):
 
 class PomodoroResponse(BaseModel):
     """Response model for pomodoro recommendation"""
-    
     focus_minutes: int = Field(..., description="Focus duration in minutes")
     rest_minutes: int = Field(..., description="Rest duration in minutes")
     rationale: str = Field(..., description="Explanation")
@@ -62,7 +64,6 @@ class PomodoroResponse(BaseModel):
 
 class HealthResponse(BaseModel):
     """Response model for health check"""
-    
     status: str = Field(..., description="Service status")
     version: str = Field(..., description="API version")
     models_loaded: Dict[str, bool] = Field(..., description="Model load status")
@@ -73,6 +74,5 @@ class HealthResponse(BaseModel):
 
 class ErrorResponse(BaseModel):
     """Response model for errors"""
-    
     detail: str = Field(..., description="Error message")
     error_code: Optional[str] = Field(None, description="Error code")
